@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class OrderDelivery: Orders {
+    var deliveryDate: Date?
+    var deliveryPerson: String?
+    var recievingPerson: String?
+    var amountCollected: Double?
+    
+    override init() {
+        self.deliveryDate = Date()
+        self.deliveryPerson = String()
+        self.recievingPerson = String()
+        self.amountCollected = Double()
+    }
+}

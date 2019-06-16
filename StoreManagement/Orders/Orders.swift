@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+class Orders: Display {
+    var orderId: Int?
+    var orderDate: Date?
+    var orderStatus: Bool?
+    var productsOrdered: [Int]?
+    var totalAmount: Double?
+    
+    init() {
+        self.orderId = Int()
+        self.orderDate = Date()
+        self.orderStatus = Bool()
+        self.productsOrdered = [Int()]
+        self.totalAmount = Double()
+    }
+    
+    func display() {
+        
+    }
+}
