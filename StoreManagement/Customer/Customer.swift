@@ -12,7 +12,7 @@ enum Gender {
     case Male, Female, Other
 }
 
-class Customer: Display {
+class Customer: IDisplay {
     var customerId: Int?
     var firstName: String?
     var lastName: String?
@@ -22,7 +22,7 @@ class Customer: Display {
     var sexDef: String?
     var gender: Gender?
     var email: String?
-    var contact: Int?
+    var contact: Int64?
     var address: Address?
     
     init() {
@@ -31,7 +31,7 @@ class Customer: Display {
         self.lastName = String()
         self.gender = Gender.Other
         self.email = String()
-        self.contact = Int()
+        self.contact = Int64()
     }
     
     func display() {
@@ -44,7 +44,7 @@ class Customer: Display {
         }else{
             print("Gender: ",Gender.Other)
         }
-        print("Address: ",address!.display())
+        //print("Address: ",address!.display())
         print("Email: ",email!)
         print("Comtact: ",contact!)
     }

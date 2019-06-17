@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Orders: Display {
+class Orders: IDisplay {
     var orderId: Int?
     var orderDate: Date?
     var orderStatus: Bool?
@@ -24,6 +24,6 @@ class Orders: Display {
     }
     
     func display() {
-        
+        print("hello")
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Address: Display {
+struct Address: IDisplay {
     
     var suiteNumber: Int
     var streetName: String

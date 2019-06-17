@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Manufacturers: Display {
+class Manufacturers: IDisplay {
     
     var manufacturerId: Int?
     var manufacturerName: String?
