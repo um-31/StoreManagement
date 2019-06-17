@@ -45,7 +45,13 @@ func readProductsData(jsonFileName: String){
 
 readProductsData(jsonFileName: "Products")
 
-
+for (k,v) in productsList {
+    p1.productId = k
+    p1.productName = v.productName ?? "No Name"
+    //p1.productPrice = v.productPrice ?? "N/A"
+    p1.display()
+    print("==============")
+}
 
 //Customer Data fetching from Json
 var u1 = Customer()

@@ -20,5 +20,9 @@ class Products: Manufacturers {
         self.productName = String()
         self.productPrice = Double()
     }
-    
+    override func display() {
+        print("Product Id: ",productId!)
+        print("Product Name: ",productName!)
+        print("Product Price: ",productPrice!)
+    }
 }
