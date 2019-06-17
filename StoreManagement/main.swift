@@ -7,10 +7,51 @@
 //
 
 import Foundation
+
+//Product Data fetching from Json
+var p1 = Products()
+var products: Products?
+var productsList = [Int: Products]()
+func readProductsData(jsonFileName: String){
+    let url = Bundle.main.url(forResource: jsonFileName, withExtension: "json")
+    
+    guard let jsonData = url else {print("fuck")
+        return
+    }
+    guard let data = try? Data(contentsOf: jsonData) else { return}
+    guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
+    
+    
+    if let jsonDictionary = json as? [Any]{
+        for jsonObject in jsonDictionary{
+            //print(jsonObject)
+            products = Products()
+            if let js = jsonObject as? [String: Any]{
+                
+                if let id = js["productId"] as? Int{
+                    products!.productId = id
+                }
+                if let name = js["productName"] as? String{
+                    products!.productName = name
+                }
+                if let price = js["productPrice"] as? Double{
+                    products!.productPrice = price
+                }
+            }
+            productsList[products!.productId!] = products
+        }
+    }
+}
+
+readProductsData(jsonFileName: "Products")
+
+
+
+//Customer Data fetching from Json
 var u1 = Customer()
 var customer: Customer?
 var customerList = [Int: Customer]()
-func readProductData(jsonFileName: String){
+func readCustomerData(jsonFileName: String){
     let url = Bundle.main.url(forResource: jsonFileName, withExtension: "json")
     
     guard let jsonData = url else {print("fuck")
@@ -50,9 +91,8 @@ func readProductData(jsonFileName: String){
         }
     }
 
-readProductData(jsonFileName: "CustomerData")
+readCustomerData(jsonFileName: "CustomerData")
 
-var name: String!
 for (k,v) in customerList {
     u1.customerId = k
     u1.firstName = v.firstName ?? "No Name"
