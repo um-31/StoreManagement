@@ -19,9 +19,11 @@ class Customer: Display {
     var fullName: String{
         return "\(firstName!) \(lastName!)"
     }
+    var sexDef: String?
     var gender: Gender?
     var email: String?
     var contact: Int?
+    var address: Address?
     
     init() {
         self.customerId = Int()
@@ -33,6 +35,17 @@ class Customer: Display {
     }
     
     func display() {
-        
+        print("Customer Id: ",customerId!)
+        print("Name: ",fullName)
+        if sexDef == "M"{
+            print("Gender: ",Gender.Male)
+        }else if sexDef == "F"{
+            print("Gender: ",Gender.Female)
+        }else{
+            print("Gender: ",Gender.Other)
+        }
+        print("Address: ",address!.display())
+        print("Email: ",email!)
+        print("Comtact: ",contact!)
     }
 }

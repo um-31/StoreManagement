@@ -20,4 +20,21 @@ class OrderDelivery: Orders {
         self.recievingPerson = String()
         self.amountCollected = Double()
     }
+    
+    override func display() {
+        print("Order Id: ",orderId!)
+        print("Order Date: ",orderDate!)
+        print("Order Status: ",orderStatus!)
+        for i in productsOrdered! {
+            print("Products Ordered: ",i)
+        }
+        print("Total Amount",totalAmount!)
+        if orderStatus == true{
+            print("Delivery Date: ",deliveryDate!)
+            print("Delivery Person: ",deliveryPerson!)
+            print("Recieving Person: ",recievingPerson!)
+            print("Amount Collected: ",amountCollected!)
+            print("Pending Amount:",(totalAmount! - amountCollected!))
+        }
+    }
 }
