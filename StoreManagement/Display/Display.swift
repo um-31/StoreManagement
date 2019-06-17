@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol Display{
+protocol IDisplay{
     func display()
 }

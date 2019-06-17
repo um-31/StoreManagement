@@ -39,6 +39,9 @@
 		FBC7B85F22B6E01F00F39028 /* OrderDelivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDelivery.swift; sourceTree = "<group>"; };
 		FBC7B86122B6E1C200F39028 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		FBC7B86422B6E23000F39028 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
+		FBC7B86722B7457200F39028 /* Products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
+		FBC7B86822B7460F00F39028 /* CustomerData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CustomerData.json; sourceTree = "<group>"; };
+		FBC7B86922B7462C00F39028 /* ManufacturerData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ManufacturerData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,7 @@
 		FBC7B84922B6DC7000F39028 /* StoreManagement */ = {
 			isa = PBXGroup;
 			children = (
+				FBC7B86622B7454600F39028 /* Resources */,
 				FBC7B86322B6E21C00F39028 /* Display */,
 				FBC7B85E22B6DFE700F39028 /* OrderDelivery */,
 				FBC7B85622B6DF2A00F39028 /* Manufacturers */,
@@ -129,6 +133,16 @@
 				FBC7B86422B6E23000F39028 /* Display.swift */,
 			);
 			path = Display;
+			sourceTree = "<group>";
+		};
+		FBC7B86622B7454600F39028 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FBC7B86722B7457200F39028 /* Products.json */,
+				FBC7B86822B7460F00F39028 /* CustomerData.json */,
+				FBC7B86922B7462C00F39028 /* ManufacturerData.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

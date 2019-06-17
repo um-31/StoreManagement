@@ -21,5 +21,4 @@ class Products: Manufacturers {
         self.productPrice = Double()
     }
     
-    
 }
