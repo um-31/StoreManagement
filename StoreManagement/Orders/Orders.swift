@@ -8,22 +8,23 @@
 
 import Foundation
 
-class Orders: IDisplay {
+class Orders: Customer {
     var orderId: Int?
-    var orderDate: Date?
+    var cust = Customer()
+    var orderDate: String?
     var orderStatus: Bool?
     var productsOrdered: [Int]?
     var totalAmount: Double?
     
-    init() {
+    override init() {
         self.orderId = Int()
-        self.orderDate = Date()
+        self.orderDate = String()
         self.orderStatus = Bool()
         self.productsOrdered = [Int()]
         self.totalAmount = Double()
     }
     
-    func display() {
+    override func display() {
         print("Order Id: ",orderId!)
         print("Order Date: ",orderDate!)
         print("Order Status: ",orderStatus! as Any)

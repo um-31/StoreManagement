@@ -168,3 +168,55 @@ for (k,v) in customerList {
     u1.display()
     print("==============")
 }
+
+// Reading Order data
+var o1 = Orders()
+var orders: Orders?
+var orderList = [Int: Orders]()
+func readOrderData(jsonFileName: String){
+    let url = Bundle.main.url(forResource: jsonFileName, withExtension: "json")
+    
+    guard let jsonData = url else {print("fuck")
+        return
+    }
+    guard let data = try? Data(contentsOf: jsonData) else { return}
+    guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
+    
+    
+    if let jsonDictionary = json as? [Any]{
+        for jsonObject in jsonDictionary{
+            //print(jsonObject)
+            orders = Orders()
+            if let js = jsonObject as? [String: Any]{
+                
+                if let id = js["orderId"] as? Int{
+                    orders!.orderId = id
+                }
+                if let date = js["orderDate"] as? String{
+                    orders!.orderDate = date
+                }
+                if let status = js["orderStatus"] as? Bool{
+                    orders!.orderStatus = status
+                }
+                if let products = js["productsOrdered"] as? [Int]{
+                    orders!.productsOrdered = products
+                }
+            }
+            orderList[orders!.orderId!] = orders
+        }
+    }
+}
+
+readOrderData(jsonFileName: "Orders")
+
+for (k,v) in orderList {
+    o1.orderId = k
+    o1.orderDate = v.orderDate ?? "No Date"
+    o1.orderStatus = v.orderStatus ?? false
+    o1.productsOrdered = v.productsOrdered
+    o1.display()
+    print("==============")
+}
+
+
+//print(userOrder)
