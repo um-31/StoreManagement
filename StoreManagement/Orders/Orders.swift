@@ -24,6 +24,11 @@ class Orders: IDisplay {
     }
     
     func display() {
-        print("hello")
+        print("Order Id: ",orderId!)
+        print("Order Date: ",orderDate!)
+        print("Order Status: ",orderStatus! as Any)
+        for p in productsOrdered! {
+            print("Product Id: ",p)
+        }
     }
 }

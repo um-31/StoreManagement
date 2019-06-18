@@ -10,7 +10,7 @@ import Foundation
 
 struct Address: IDisplay {
     
-    var suiteNumber: Int
+    var suiteNumber: String
     var streetName: String
     var city: String
     var postalCode: String

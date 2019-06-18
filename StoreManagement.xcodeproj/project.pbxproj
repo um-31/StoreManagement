@@ -18,6 +18,7 @@
 		FBC7B86B22B74E2C00F39028 /* CustomerData.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = FBC7B86822B7460F00F39028 /* CustomerData.json */; };
 		FBC7B86C22B74E3700F39028 /* Products.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = FBC7B86722B7457200F39028 /* Products.json */; };
 		FBC7B86D22B74E3B00F39028 /* ManufacturerData.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = FBC7B86922B7462C00F39028 /* ManufacturerData.json */; };
+		FBC7B88722B876D800F39028 /* Departments.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC7B88622B876D800F39028 /* Departments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +58,7 @@
 		FBC7B86722B7457200F39028 /* Products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
 		FBC7B86822B7460F00F39028 /* CustomerData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CustomerData.json; sourceTree = "<group>"; };
 		FBC7B86922B7462C00F39028 /* ManufacturerData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ManufacturerData.json; sourceTree = "<group>"; };
+		FBC7B88622B876D800F39028 /* Departments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Departments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		FBC7B84922B6DC7000F39028 /* StoreManagement */ = {
 			isa = PBXGroup;
 			children = (
+				FBC7B88522B876AD00F39028 /* Department */,
 				FBC7B86622B7454600F39028 /* Resources */,
 				FBC7B86322B6E21C00F39028 /* Display */,
 				FBC7B85E22B6DFE700F39028 /* OrderDelivery */,
@@ -160,6 +163,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		FBC7B88522B876AD00F39028 /* Department */ = {
+			isa = PBXGroup;
+			children = (
+				FBC7B88622B876D800F39028 /* Departments.swift */,
+			);
+			path = Department;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,6 +231,7 @@
 			files = (
 				FBC7B85922B6DF8C00F39028 /* Products.swift in Sources */,
 				FBC7B84B22B6DC7000F39028 /* main.swift in Sources */,
+				FBC7B88722B876D800F39028 /* Departments.swift in Sources */,
 				FBC7B85B22B6DF9B00F39028 /* Orders.swift in Sources */,
 				FBC7B85D22B6DFAB00F39028 /* Manufacturers.swift in Sources */,
 				FBC7B86022B6E01F00F39028 /* OrderDelivery.swift in Sources */,

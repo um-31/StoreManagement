@@ -44,8 +44,8 @@ class Customer: IDisplay {
         }else{
             print("Gender: ",Gender.Other)
         }
-        //print("Address: ",address!.display())
+        //address!.display()
         print("Email: ",email!)
-        print("Comtact: ",contact!)
+        print("Contact: ",contact!)
     }
 }
