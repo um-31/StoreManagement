@@ -28,13 +28,13 @@ class OrderDelivery: Orders {
         for i in productsOrdered! {
             print("Products Ordered: ",i)
         }
-        print("Total Amount",totalAmount!)
+        //print("Total Amount",totalAmount!)
         if orderStatus == true{
             print("Delivery Date: ",deliveryDate!)
             print("Delivery Person: ",deliveryPerson!)
             print("Recieving Person: ",recievingPerson!)
             print("Amount Collected: ",amountCollected!)
-            print("Pending Amount:",(totalAmount! - amountCollected!))
+            //print("Pending Amount:",(totalAmount! - amountCollected!))
         }
     }
 }

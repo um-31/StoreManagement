@@ -23,6 +23,7 @@ class Customer: IDisplay {
     var gender: Gender?
     var email: String?
     var contact: Int64?
+    var orderPlaced: Int?
     var address: Address?
     
     init() {
@@ -32,6 +33,8 @@ class Customer: IDisplay {
         self.gender = Gender.Other
         self.email = String()
         self.contact = Int64()
+        self.orderPlaced = Int()
+        
     }
     
     func display() {
@@ -44,8 +47,13 @@ class Customer: IDisplay {
         }else{
             print("Gender: ",Gender.Other)
         }
-        //address!.display()
+        //print(address)
+        if address != nil
+        {
+            address!.display()
+        }else{print("No address found")}
         print("Email: ",email!)
         print("Contact: ",contact!)
+        print("Order Id: ",orderPlaced!)
     }
 }

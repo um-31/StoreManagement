@@ -14,20 +14,20 @@ class Orders: Customer {
     var orderDate: String?
     var orderStatus: Bool?
     var productsOrdered: [Int]?
-    var totalAmount: Double?
+    //var totalAmount: Double?
     
     override init() {
         self.orderId = Int()
         self.orderDate = String()
         self.orderStatus = Bool()
         self.productsOrdered = [Int()]
-        self.totalAmount = Double()
+        //self.totalAmount = Double()
     }
     
     override func display() {
         print("Order Id: ",orderId!)
         print("Order Date: ",orderDate!)
-        print("Order Status: ",orderStatus! as Any)
+        print("Order Status: ",orderStatus!)
         for p in productsOrdered! {
             print("Product Id: ",p)
         }
