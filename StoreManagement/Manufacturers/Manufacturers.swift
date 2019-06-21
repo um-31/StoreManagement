@@ -12,17 +12,14 @@ class Manufacturers: IDisplay {
     
     var manufacturerId: Int?
     var manufacturerName: String?
-    var manufacturerContact: Int64?
     
     init() {
         self.manufacturerId = Int()
         self.manufacturerName = String()
-        self.manufacturerContact = Int64()
     }
     
     func display() {
         print("Manufacturer Id: ",manufacturerId!)
         print("Manufacturer Name: ",manufacturerName!)
-        print("Manufacturer Contact:",manufacturerContact!)
     }
 }

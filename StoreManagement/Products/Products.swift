@@ -24,5 +24,6 @@ class Products: Manufacturers {
         print("Product Id: ",productId!)
         print("Product Name: ",productName!)
         print("Product Price: ",productPrice!)
+        
     }
 }

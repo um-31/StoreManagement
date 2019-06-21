@@ -34,9 +34,6 @@ func readManufacturerData(jsonFileName: String){
                 if let name = js["manufacturerName"] as? String{
                     manufacturers!.manufacturerName = name
                 }
-                if let contact = js["manufacturerContact"] as? Int64{
-                    manufacturers!.manufacturerContact = contact
-                }
             }
             manufacturersList[manufacturers!.manufacturerId!] = manufacturers
         }
@@ -45,11 +42,11 @@ func readManufacturerData(jsonFileName: String){
 
 readManufacturerData(jsonFileName: "ManufacturerData")
 
-for (k,v) in manufacturersList {
-    m1.manufacturerId = k
-    v.display()
-    print("==============")
-}
+//for (k,v) in manufacturersList {
+//    m1.manufacturerId = k
+//    v.display()
+//    print("==============")
+//}
 
 //Product Data fetching from Json
 var p1 = Products()
@@ -88,11 +85,11 @@ func readProductsData(jsonFileName: String){
 
 readProductsData(jsonFileName: "Products")
 
-for (k,v) in productsList {
-    p1.productId = k
-    v.display()
-    print("==============")
-}
+//for (k,v) in productsList {
+//    p1.productId = k
+//    v.display()
+//    print("==============")
+//}
 
 //Customer Data fetching from Json
 var u1 = Customer()
@@ -165,11 +162,11 @@ func readCustomerData(jsonFileName: String){
 
 readCustomerData(jsonFileName: "CustomerData")
 
-for (k,v) in customerList {
-    u1.customerId = k
-    v.display()
-    print("==============")
-}
+//for (k,v) in customerList {
+//    u1.customerId = k
+//    v.display()
+//    print("==============")
+//}
 
 // Reading Order data
 var o1 = Orders()
@@ -202,6 +199,7 @@ func readOrderData(jsonFileName: String){
                 }
                 if let products = js["productsOrdered"] as? [Int]{
                     orders!.productsOrdered = products
+                    
                 }
             }
             orderList[orders!.orderId!] = orders
@@ -277,5 +275,11 @@ if option == 1{
                 }
             }
         }
+    }
+}else if option == 5{
+    for (k,v) in productsList{
+        p1.productId = k
+        v.display()
+        print("==============")
     }
 }
