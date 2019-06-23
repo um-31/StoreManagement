@@ -15,15 +15,21 @@ class Products: Manufacturers {
     var productName: String?
     var productPrice: Double?
     
-    override init() {
-        self.productId = Int()
-        self.productName = String()
-        self.productPrice = Double()
+    init(manufId: Int, manufName: String, productId: Int, productName: String, productPrice: Double) {
+        self.productId = productId
+        self.productName = productName
+        self.productPrice = productPrice
+        super.init(manufId: manufId, manufName: manufName)
     }
+//    init() {
+//        self.productId = Int()
+//        self.productName = String()
+//        self.productPrice = Double()
+//    }
     override func display() {
         print("Product Id: ",productId!)
         print("Product Name: ",productName!)
         print("Product Price: ",productPrice!)
-        
+        print("Manufacturer Name: ",manufacturerName!)
     }
 }

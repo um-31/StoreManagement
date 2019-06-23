@@ -13,9 +13,9 @@ class Manufacturers: IDisplay {
     var manufacturerId: Int?
     var manufacturerName: String?
     
-    init() {
-        self.manufacturerId = Int()
-        self.manufacturerName = String()
+    init(manufId:Int, manufName:String) {
+        self.manufacturerId = manufId
+        self.manufacturerName = manufName
     }
     
     func display() {

@@ -54,6 +54,6 @@ class Customer: IDisplay {
         }else{print("No address found")}
         print("Email: ",email!)
         print("Contact: ",contact!)
-        print("Order Id: ",orderPlaced!)
+        //print("Order Id: ",orderPlaced!)
     }
 }
