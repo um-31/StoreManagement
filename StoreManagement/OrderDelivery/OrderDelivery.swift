@@ -19,6 +19,7 @@ class OrderDelivery: Orders {
         self.deliveryPerson = String()
         self.recievingPerson = String()
         self.amountCollected = Double()
+        super.init()
     }
     
     override func display() {

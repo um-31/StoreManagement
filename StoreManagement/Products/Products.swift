@@ -29,7 +29,7 @@ class Products: Manufacturers {
     override func display() {
         print("Product Id: ",productId!)
         print("Product Name: ",productName!)
-        print("Product Price: ",productPrice!)
+        print("Product Price: ",productPrice!.dollar())
         print("Manufacturer Name: ",manufacturerName!)
     }
 }

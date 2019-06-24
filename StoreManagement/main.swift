@@ -205,7 +205,6 @@ func readOrderData(jsonFileName: String){
                 }
                 if let products = js["productsOrdered"] as? [Int]{
                     orders!.productsOrdered = products
-                    print(products)
                 }
             }
             orderList[orders!.orderId!] = orders
@@ -254,7 +253,7 @@ if option == 1{
                     }
                 }
             }
-        print("Total: ",sum)
+        print("Total: ",sum.dollar())
         print("<==============>")
     }
 }else if option == 3{
@@ -279,7 +278,7 @@ if option == 1{
                     }
                 }
             }
-            print("Total: ",sum)
+            print("Total: ",sum.dollar())
         }
     }
 }else if option == 4{
@@ -313,15 +312,27 @@ if option == 1{
         }
     }
 }else if option == 5{
+    var temp = 0
+    var prod: String?
     for (k,v) in productsList{
         p1.productId = k
         v.display()
         print("==============")
     }
+    print("Enter Product Id to Check Order History: ")
     let option3 = Int(readLine()!)
     for (k,v) in productsList{
         if k == option3{
-            
+            for (k1,v1) in orderList{
+                for i in v1.productsOrdered!{
+                    if k == i {
+                        temp = temp + 1
+                        prod = v.productName
+                        print("\nOrdered in Order Id: ",k1)
+                    }
+                }
+            }
         }
     }
+    print("\n\(prod!) was order \(temp) times.")
 }
