@@ -14,14 +14,7 @@ class Orders: Customer {
     var orderDate: String?
     var orderStatus: Bool?
     var productsOrdered: [Int]?
-//    var totalAmount: Double{
-//        var sum: Double = 0
-//        //var pro: Products?
-//        for i in productsOrdered! {
-//            sum = sum + i.productPrice!
-//        }
-//        return sum
-//    }
+    
     override init() {
         self.orderId = Int()
         self.orderDate = String()
@@ -36,6 +29,5 @@ class Orders: Customer {
         for p in productsOrdered! {
             print("Product Id: ",p)
         }
-//        print("Total: ",totalAmount)
     }
 }

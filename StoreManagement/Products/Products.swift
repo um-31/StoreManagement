@@ -21,11 +21,7 @@ class Products: Manufacturers {
         self.productPrice = productPrice
         super.init(manufId: manufId, manufName: manufName)
     }
-//    init() {
-//        self.productId = Int()
-//        self.productName = String()
-//        self.productPrice = Double()
-//    }
+
     override func display() {
         print("Product Id: ",productId!)
         print("Product Name: ",productName!)

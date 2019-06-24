@@ -8,46 +8,6 @@
 
 import Foundation
 
-//Manufacturer Data fetching from Json
-//var m1 = Manufacturers()
-//var manufacturers: Manufacturers?
-//var manufacturersList = [Int: Manufacturers]()
-//func readManufacturerData(jsonFileName: String){
-//    let url = Bundle.main.url(forResource: jsonFileName, withExtension: "json")
-//
-//    guard let jsonData = url else {print("fuck")
-//        return
-//    }
-//    guard let data = try? Data(contentsOf: jsonData) else { return}
-//    guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
-//
-//
-//    if let jsonDictionary = json as? [Any]{
-//        for jsonObject in jsonDictionary{
-//            //print(jsonObject)
-//            manufacturers = Manufacturers()
-//            if let js = jsonObject as? [String: Any]{
-//
-//                if let id = js["manufacturerId"] as? Int{
-//                    manufacturers!.manufacturerId = id
-//                }
-//                if let name = js["manufacturerName"] as? String{
-//                    manufacturers!.manufacturerName = name
-//                }
-//            }
-//            manufacturersList[manufacturers!.manufacturerId!] = manufacturers
-//        }
-//    }
-//}
-//
-//readManufacturerData(jsonFileName: "ManufacturerData")
-
-//for (k,v) in manufacturersList {
-//    m1.manufacturerId = k
-//    v.display()
-//    print("==============")
-//}
-
 //Product Data fetching from Json
 var p1 = Products(manufId: 0, manufName: "Abc", productId: 0, productName: "Apple", productPrice: 10)
 var products: Products?
@@ -64,7 +24,6 @@ func readProductsData(jsonFileName: String){
     
     if let jsonDictionary = json as? [Any]{
         for jsonObject in jsonDictionary{
-            //print(jsonObject)
             products = Products(manufId: 0, manufName: "", productId: 0, productName: "", productPrice: 10)
             if let js = jsonObject as? [String: Any]{
                 
@@ -90,12 +49,6 @@ func readProductsData(jsonFileName: String){
 }
 
 readProductsData(jsonFileName: "Products")
-
-//for (k,v) in productsList {
-//    p1.productId = k
-//    v.display()
-//    print("==============")
-//}
 
 //Customer Data fetching from Json
 var u1 = Customer()
@@ -168,12 +121,6 @@ func readCustomerData(jsonFileName: String){
 
 readCustomerData(jsonFileName: "CustomerData")
 
-//for (k,v) in customerList {
-//    u1.customerId = k
-//    v.display()
-//    print("==============")
-//}
-
 // Reading Order data
 var o1 = Orders()
 var orders: Orders?
@@ -230,7 +177,6 @@ func readOrderDelData(jsonFileName: String){
     
     if let jsonDictionary = json as? [Any]{
         for jsonObject in jsonDictionary{
-            //print(jsonObject)
             orderDel = OrderDelivery()
             if let js = jsonObject as? [String: Any]{
                 
@@ -260,12 +206,7 @@ func readOrderDelData(jsonFileName: String){
 
 readOrderDelData(jsonFileName: "OrderDel")
 
-//for (k,v) in orderList {
-//    o1.orderId = k
-//    v.display()
-//    print("==============")
-//}
-//var abc: Int?
+//Functionality
 print("Please Enter your Desired Option:")
 print("Press 1 to view all Customers")
 print("Press 2 to view all Orders")
@@ -385,7 +326,7 @@ if option == 1{
 }else if option == 6{
     for (_,v) in orderDelList{
         print(v.orderId!)
-        print("<==============>")
+        print("<==============>\n")
     }
     print("Chose Order No. to see Delivery Details")
     let option3 = Int(readLine()!)

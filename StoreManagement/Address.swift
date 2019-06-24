@@ -14,14 +14,7 @@ struct Address: IDisplay {
     var streetName: String
     var city: String
     var postalCode: String
-    
-//    init() {
-//        self.suiteNumber = String()
-//        self.streetName = String()
-//        self.city = String()
-//        self.postalCode = String()
-//    }
-    
+        
     func display() {
         print("Address: ",suiteNumber,streetName,city)
         print("Postal Code: ",postalCode)
