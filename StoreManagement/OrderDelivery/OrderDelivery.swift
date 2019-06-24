@@ -9,33 +9,24 @@
 import Foundation
 
 class OrderDelivery: Orders {
-    var deliveryDate: Date?
+    var deliveryDate: String?
     var deliveryPerson: String?
     var recievingPerson: String?
-    var amountCollected: Double?
     
     override init() {
-        self.deliveryDate = Date()
+        self.deliveryDate = String()
         self.deliveryPerson = String()
         self.recievingPerson = String()
-        self.amountCollected = Double()
-        super.init()
     }
     
     override func display() {
         print("Order Id: ",orderId!)
         print("Order Date: ",orderDate!)
         print("Order Status: ",orderStatus!)
-        for i in productsOrdered! {
-            print("Products Ordered: ",i)
-        }
-        //print("Total Amount",totalAmount!)
         if orderStatus == true{
             print("Delivery Date: ",deliveryDate!)
             print("Delivery Person: ",deliveryPerson!)
             print("Recieving Person: ",recievingPerson!)
-            print("Amount Collected: ",amountCollected!)
-            //print("Pending Amount:",(totalAmount! - amountCollected!))
         }
     }
 }

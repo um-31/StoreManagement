@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB45555E22C14EE20065B414 /* Dollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB45555D22C14EE20065B414 /* Dollar.swift */; };
+		FB45556022C1566D0065B414 /* OrderDel.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = FB45555F22C154870065B414 /* OrderDel.json */; };
 		FBC7B84B22B6DC7000F39028 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC7B84A22B6DC7000F39028 /* main.swift */; };
 		FBC7B85322B6DD1300F39028 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC7B85222B6DD1300F39028 /* Customer.swift */; };
 		FBC7B85922B6DF8C00F39028 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC7B85822B6DF8C00F39028 /* Products.swift */; };
@@ -38,6 +39,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				FB45556022C1566D0065B414 /* OrderDel.json in CopyFiles */,
 				FBC7B88922B8A6A400F39028 /* Orders.json in CopyFiles */,
 				FBC7B86D22B74E3B00F39028 /* ManufacturerData.json in CopyFiles */,
 				FBC7B86C22B74E3700F39028 /* Products.json in CopyFiles */,
@@ -48,8 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FB45555B22C142E00065B414 /* OrderDelivery.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = OrderDelivery.json; sourceTree = "<group>"; };
 		FB45555D22C14EE20065B414 /* Dollar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dollar.swift; sourceTree = "<group>"; };
+		FB45555F22C154870065B414 /* OrderDel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = OrderDel.json; sourceTree = "<group>"; };
 		FBC7B84722B6DC7000F39028 /* StoreManagement */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StoreManagement; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC7B84A22B6DC7000F39028 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FBC7B85222B6DD1300F39028 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
@@ -172,7 +174,7 @@
 				FBC7B86822B7460F00F39028 /* CustomerData.json */,
 				FBC7B86922B7462C00F39028 /* ManufacturerData.json */,
 				FBC7B88822B89FF300F39028 /* Orders.json */,
-				FB45555B22C142E00065B414 /* OrderDelivery.json */,
+				FB45555F22C154870065B414 /* OrderDel.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

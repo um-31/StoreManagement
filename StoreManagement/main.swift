@@ -214,6 +214,52 @@ func readOrderData(jsonFileName: String){
 
 readOrderData(jsonFileName: "Orders")
 
+//Reading order Delivery Data
+var od1 = OrderDelivery()
+var orderDel: OrderDelivery?
+var orderDelList = [Int: Orders]()
+func readOrderDelData(jsonFileName: String){
+    let url = Bundle.main.url(forResource: jsonFileName, withExtension: "json")
+    
+    guard let jsonData = url else {
+        return
+    }
+    guard let data = try? Data(contentsOf: jsonData) else { return}
+    guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
+    
+    
+    if let jsonDictionary = json as? [Any]{
+        for jsonObject in jsonDictionary{
+            //print(jsonObject)
+            orderDel = OrderDelivery()
+            if let js = jsonObject as? [String: Any]{
+                
+                if let id = js["orderId"] as? Int{
+                    orderDel!.orderId = id
+                }
+                if let date = js["orderDate"] as? String{
+                    orderDel!.orderDate = date
+                }
+                if let status = js["orderStatus"] as? Bool{
+                    orderDel!.orderStatus = status
+                }
+                if let delDate = js["deliveryDate"] as? String{
+                    orderDel!.deliveryDate = delDate
+                }
+                if let delPerson = js["deliveryPerson"] as? String{
+                    orderDel!.deliveryPerson = delPerson
+                }
+                if let resPerson = js["recievingPerson"] as? String{
+                    orderDel!.recievingPerson = resPerson
+                }
+            }
+            orderDelList[orderDel!.orderId!] = orderDel
+        }
+    }
+}
+
+readOrderDelData(jsonFileName: "OrderDel")
+
 //for (k,v) in orderList {
 //    o1.orderId = k
 //    v.display()
@@ -226,6 +272,7 @@ print("Press 2 to view all Orders")
 print("Press 3 to search by Order Id")
 print("Press 4 to search by Customer Id")
 print("Press 5 to search a Product")
+print("Press 6 to search for Delivery Details")
 
 let option = Int(readLine()!)
 if option == 1{
@@ -335,4 +382,16 @@ if option == 1{
         }
     }
     print("\n\(prod!) was order \(temp) times.")
+}else if option == 6{
+    for (_,v) in orderDelList{
+        print(v.orderId!)
+        print("<==============>")
+    }
+    print("Chose Order No. to see Delivery Details")
+    let option3 = Int(readLine()!)
+    for (_,v) in orderDelList{
+        if option3 == v.orderId!{
+            v.display()
+        }
+    }
 }
